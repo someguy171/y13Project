@@ -52,5 +52,7 @@ response = requests.get(
 ).json()
 
 # store the json response in a file
-with open("apiTesting/data.json", "w") as file:
+with open("APItest/data.json", "w") as file:
     json.dump(response, file, indent=4)
+
+print("there are " + str(len(response["todos"])) + " homeworks created")
